@@ -1,0 +1,9 @@
+com\zcx\fruit\dao\FruitDao.class
+com\zcx\fruit\servlets\IndexServlet.class
+com\zcx\fruit\servlets\EditServlet.class
+com\zcx\fruit\servlets\AddServlet.class
+com\zcx\fruit\servlets\ViewBaseServlet.class
+com\zcx\fruit\servlets\UpdateServlet.class
+com\zcx\fruit\utils\JdbcUtils.class
+com\zcx\fruit\servlets\DelServlet.class
+com\zcx\fruit\domain\Fruit.class
