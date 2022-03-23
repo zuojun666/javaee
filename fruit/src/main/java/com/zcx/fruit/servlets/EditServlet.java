@@ -8,7 +8,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet("/edit.do")
-public class EditServlet extends ViewBaseServlet {
+public class EditServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -16,7 +16,8 @@ public class EditServlet extends ViewBaseServlet {
         Fruit fruit = new Fruit();
         fruit.setFid(Integer.valueOf(fid));
         request.getSession().setAttribute("fruit",fruit);
-        super.processTemplate("edit",request,response);
+        /*response.sendRedirect("/edit.jsp");*/
+        request.getRequestDispatcher("/edit.jsp").forward(request,response);
     }
 
     @Override

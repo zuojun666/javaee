@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fruit_static:war">
+    <output-path>$PROJECT_DIR$/fruit_static/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>fruit_static</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="fruit_static-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="fruit_static:war exploded" />
+    </root>
+  </artifact>
+</component>

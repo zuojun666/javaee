@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title>首页</title>
+</head>
+<body>
+<div id="div_container">
+  <div id="div_fruit_list">
+    <p class="center f30">欢迎使用水果库存后台管理系统</p>
+    <div style="border:0 solid red;width:60%;margin-left:20%;text-align:right;">
+      <a th:href="@{/add.html}"
+         style="border:0 solid blue;margin-bottom:4px;">添加新库存记录</a>
+    </div>
+    <form th:action="@{/select.do}">
+      <table id="tbl_fruit">
+        <tr>
+          <td colspan="4"><a href="/index" style="width: 400px;height: 30px">回到首页</a></td>
+        </tr>
+        <tr>
+          <td colspan="4"><input name="select_value" style="width: 350px;height: 30px" type="text">
+            <input type="submit" style="width: 200px;height: 30px" value="关键字查询">
+          </td>
+        </tr>
+        <tr>
+          <th class="w20">名称</th>
+          <th class="w20">单价</th>
+          <th class="w20">库存</th>
+          <th>操作</th>
+        </tr>
+        <tr th:if="${#lists.isEmpty(session.fruitList)}">
+          <td colspan="4">对不起，库存为空！</td>
+        </tr>
+        <tr th:unless="${#lists.isEmpty(session.fruitList)}" th:each="fruit : ${session.fruitList}">
+          <td><a th:href="@{/edit.do(fid=${fruit.fid})}" th:text="${fruit.fname}">默认</a></td>
+          <td th:text="${fruit.price}">默认</td>
+          <td th:text="${fruit.fcount}">默认</td>
+          <td><img src="imgs/del.jpg" class="delImg" th:onclick="|delFruit(${fruit.fid})|" alt=""/></td>
+        </tr>
+        <tr>
+          <td colspan="2"><a
+                  th:href="@{/list.do(pageNum=${session.pageNum - 1})}"
+                  style="width: 100px;height: 50px;">上一页</a></td>
+          <td colspan="2"><a
+                  th:href="@{/list.do(pageNum=${session.pageNum + 1})}"
+                  style="width: 100px;height: 50px;">下一页</a></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+</body>
+</html>

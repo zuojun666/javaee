@@ -11,7 +11,10 @@
         <module name="demo02" />
         <module name="demo01" />
         <module name="fruit" />
+        <module name="thymeleaf_test" />
+        <module name="fruit_new" />
         <module name="test_tomcat_plugin" />
+        <module name="fruit_static" />
         <module name="demo05_fruit" />
       </profile>
     </annotationProcessing>
@@ -22,8 +25,11 @@
       <module name="demo04" target="1.7" />
       <module name="demo05_fruit" target="1.5" />
       <module name="fruit" target="1.8" />
+      <module name="fruit_new" target="1.8" />
+      <module name="fruit_static" target="1.8" />
       <module name="test_maven_plugin" target="1.7" />
       <module name="test_tomcat_plugin" target="1.8" />
+      <module name="thymeleaf_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

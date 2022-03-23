@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="thymeleaf_test:war">
+    <output-path>$PROJECT_DIR$/thymeleaf_test/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>thymeleaf_test</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="thymeleaf_test-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="thymeleaf_test:war exploded" />
+    </root>
+  </artifact>
+</component>

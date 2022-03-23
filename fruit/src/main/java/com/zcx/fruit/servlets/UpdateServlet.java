@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet("/update.do")
-public class UpdateServlet extends ViewBaseServlet {
+public class UpdateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -25,9 +25,11 @@ public class UpdateServlet extends ViewBaseServlet {
             request.getSession().setAttribute("fruit",fruit);
             FruitDao fruitDao = new FruitDao();
             fruitDao.updateById(fruit);
-            response.sendRedirect("/index.html");
+            /*response.sendRedirect("/index");*/
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+        }finally {
+            request.getRequestDispatcher("/index").forward(request,response);
         }
     }
 

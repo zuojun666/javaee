@@ -8,7 +8,11 @@
       <module fileurl="file://$PROJECT_DIR$/demo04/demo04.iml" filepath="$PROJECT_DIR$/demo04/demo04.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo05_fruit/demo05_fruit.iml" filepath="$PROJECT_DIR$/demo05_fruit/demo05_fruit.iml" />
       <module fileurl="file://$PROJECT_DIR$/fruit/fruit.iml" filepath="$PROJECT_DIR$/fruit/fruit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_new/fruit_new.iml" filepath="$PROJECT_DIR$/fruit_new/fruit_new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_static/fruit_static.iml" filepath="$PROJECT_DIR$/fruit_static/fruit_static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/javaweb代码素材资料/Day5-thymeleaf-fruit/代码/pro10-fruit1.5-thymeleaf/pro10-fruit1.5-thymeleaf.iml" filepath="$PROJECT_DIR$/../../../BaiduNetdiskDownload/javaweb代码素材资料/Day5-thymeleaf-fruit/代码/pro10-fruit1.5-thymeleaf/pro10-fruit1.5-thymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/test_tomcat_plugin/test_tomcat_plugin.iml" filepath="$PROJECT_DIR$/test_tomcat_plugin/test_tomcat_plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thymeleaf_test/thymeleaf_test.iml" filepath="$PROJECT_DIR$/thymeleaf_test/thymeleaf_test.iml" />
     </modules>
   </component>
 </project>

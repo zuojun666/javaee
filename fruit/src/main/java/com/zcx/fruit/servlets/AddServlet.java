@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet("/add.do")
-public class AddServlet extends ViewBaseServlet {
+public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -22,9 +22,11 @@ public class AddServlet extends ViewBaseServlet {
             fruit.setPrice(Double.valueOf(request.getParameter("price")));
             fruit.setFcount(Integer.valueOf(request.getParameter("fcount")));
             fruitDao.addFruit(fruit);
-            response.sendRedirect("/index.html");
+            /*response.sendRedirect("/index");*/
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+        }finally {
+            request.getRequestDispatcher("/index").forward(request,response);
         }
 
     }
